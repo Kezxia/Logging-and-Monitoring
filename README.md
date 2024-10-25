@@ -7,9 +7,21 @@
 
 
 
+
 <details>
 <summary>Part 1: Put Large Geo-Data Files in Azure Storage.</summary>
 
+1. Download this file onto your PC.<br>
+2. Create a Log Analytics Workspace (our log aggregator) named: LAW-Cyber-Lab-0x.<br>
+- Search “Log Analytics workspaces” → select create log analytics workspace.
+![Azure image](https://imgur.com/ZG2ErXM.png)
+- Put it in the EG-Cyber-Lab Resource Group & name it LAW-Cyber-Lab-0x & keep the region the same (East US 2) → select “review + create”.
+![Azure image](https://imgur.com/kF38dVg.png)
+3. Setup Sentinel and connect it to our Log Analytics Workspace.<br>
+- Search for “sentinel” → select create Microsoft Sentinel.
+![Azure image](https://imgur.com/TaAjWMt.png)
+- Select LAW-Cyber-Lab-01 → select add.
+![Azure image](https://imgur.com/6grwBGN.png)
 </details>
 
 <details>
