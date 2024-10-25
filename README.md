@@ -11,22 +11,28 @@
 <details>
 <summary>Part 1: Put Large Geo-Data Files in Azure Storage.</summary>
 
-1. Download this file onto your PC.<br>
-2. Create a Log Analytics Workspace (our log aggregator) named: LAW-Cyber-Lab-0x.<br>
-- Search “Log Analytics workspaces” → select create log analytics workspace.
-![Azure image](https://imgur.com/ZG2ErXM.png)
-- Put it in the EG-Cyber-Lab Resource Group & name it LAW-Cyber-Lab-0x & keep the region the same (East US 2) → select “review + create”.
-![Azure image](https://imgur.com/kF38dVg.png)
-3. Setup Sentinel and connect it to our Log Analytics Workspace.<br>
-- Search for “sentinel” → select create Microsoft Sentinel.
-![Azure image](https://imgur.com/TaAjWMt.png)
-- Select LAW-Cyber-Lab-01 → select add.
-![Azure image](https://imgur.com/6grwBGN.png)
+1. Create a Log Analytics Workspace (our log aggregator) named: LAW-Cyber-Lab-0x.<br>
+    a. Search “Log Analytics workspaces” → select create log analytics workspace.
+    ![Azure image](https://imgur.com/ZG2ErXM.png)
+    b. Put it in the EG-Cyber-Lab Resource Group & name it LAW-Cyber-Lab-0x & keep the region the same (East US 2) → select “review + create”.
+    ![Azure image](https://imgur.com/kF38dVg.png)
+2. Setup Sentinel and connect it to our Log Analytics Workspace.<br>
+    a. Search for “sentinel” → select create Microsoft Sentinel.
+    ![Azure image](https://imgur.com/TaAjWMt.png)
+    b. Select LAW-Cyber-Lab-01 → select add.
+    ![Azure image](https://imgur.com/6grwBGN.png)
 </details>
 
 <details>
 <summary>Part 2: Create the geoip watchlist.</summary>
 
+1. Download this [geoip-summarized.csv file](https://github.com/joshmadakor1/Cyber-Course-v2/blob/main/Sentinel-Maps(JSON)/geoip-summarized.csv) onto your PC.<br>
+    a. Go to watchlist in the workspace of ‘LAW-Cyber-Lab-0x’ & click ‘+ new’ to create a new Watchlist.<br>
+    b. Name/Alias should be: geoip … then click next.<br>
+    c. Source type: Local File, then click ‘browse for files’ & select what we downloaded earlier.<br>
+    d. The File Preview should show up…SearchKey should be Network.. then click ‘review + create’.<br>
+    e. Go back to watchlist to see the one we just created.<br>
+    f. Allow time for these files to “upload”/load from your storage account into Sentinel/Log Analytics Workspace. There are about 27k /55k rows/records.<br>
 </details>
 
 <details>
