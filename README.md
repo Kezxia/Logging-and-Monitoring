@@ -28,10 +28,16 @@
 
 1. Download this [geoip-summarized.csv file](https://github.com/joshmadakor1/Cyber-Course-v2/blob/main/Sentinel-Maps(JSON)/geoip-summarized.csv) onto your PC.<br>
     a. Go to watchlist in the workspace of ‘LAW-Cyber-Lab-0x’ & click ‘+ new’ to create a new Watchlist.<br>
-    b. Name/Alias should be: geoip … then click next.<br>
+    ![Azure image](https://imgur.com/JLZ02ar.png)
+    b. Name/Alias should be: geoip → select next.<br>
+    ![Azure image](https://imgur.com/fTLAKVZ.png)
     c. Source type: Local File, then click ‘browse for files’ & select what we downloaded earlier.<br>
-    d. The File Preview should show up…SearchKey should be Network.. then click ‘review + create’.<br>
+    ![Azure image](https://imgur.com/q5ecjpK.png)
+    ![Azure image](https://imgur.com/j5nywDg.png)
+    d. The File Preview should show up → SearchKey should be Network → select ‘review + create’.<br>
+    ![Azure image](https://imgur.com/RMt8skB.png)
     e. Go back to watchlist to see the one we just created.<br>
+    ![Azure image](https://imgur.com/EzAvOh5.png)
     f. Allow time for these files to “upload”/load from your storage account into Sentinel/Log Analytics Workspace. There are about 27k /55k rows/records.<br>
 </details>
 
