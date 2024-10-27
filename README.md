@@ -44,6 +44,12 @@
 <details>
 <summary>Part 3: Query and observe logs in the Log Analytics Workspace.</summary>
 
+1. Go to Log Analytics Workspace & click on ‘LAW-Cyber-Lab-0x’.<br>
+![Azure image](https://imgur.com/9dkslq8.png)
+2. Click on logs and paste the query ‘_GetWatchlist("geoip")’ then click Run.<br>
+![Azure image](https://imgur.com/8IDPIDY.png)
+3. Typing ‘| count’ will return the total number of records there are.<br>
+![Azure image](https://imgur.com/BRDoI8l.png)
 </details>
 
 
