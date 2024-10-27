@@ -44,9 +44,9 @@
 <details>
 <summary>Part 3: Query and observe logs in the Log Analytics Workspace.</summary>
 
-1. Go to Log Analytics Workspace & click on ‘LAW-Cyber-Lab-0x’.<br>
+1. Go to Log Analytics Workspace → select ‘LAW-Cyber-Lab-0x’.<br>
 ![Azure image](https://imgur.com/9dkslq8.png)
-2. Click on logs and paste the query ‘_GetWatchlist("geoip")’ then click Run.<br>
+2. Click on logs and paste the query ‘_GetWatchlist("geoip")’ → select Run.<br>
 ![Azure image](https://imgur.com/8IDPIDY.png)
 3. Typing ‘| count’ will return the total number of records there are.<br>
 ![Azure image](https://imgur.com/BRDoI8l.png)
@@ -64,16 +64,26 @@
 <details>
 <summary>Part 1: Enable Microsoft Defender for Cloud for Log Analytics Workspace.</summary>
 
+1. Enable Defender Plans for VMs and SQL Instances on VMs.<br>
+Search Microsoft Defender and click on ‘Environment settings → select the toggle & click on the three dots to edit settings for ‘LAW-Cyber-Lab-0x’.
+![Azure image](https://imgur.com/IBYBBLy.png)
+
 </details>
 
 <details>
 <summary>Part 2: Enable Defender Plans for VMs and SQL Instances on VMs.</summary>
 
+1. Turn ‘Servers’ & ‘SQL servers on machines’ ON → select ‘save’.
+![Azure image](https://imgur.com/Vv21I7L.png)
 </details>
 
 <details>
 <summary>Part 3: Enable Data Collection (All Events).</summary>
 
+1. Select ‘Data Collection’ & ‘All Events’ → select ‘save’.
+![Azure image](https://imgur.com/aZJLqCZ.png)
+2. Go back to Microsoft Defender, refresh & you will see it now has 2 plans.
+![Azure image](https://imgur.com/zdtQQ53.png)
 </details>
 
 <details>
