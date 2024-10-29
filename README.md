@@ -114,6 +114,9 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 6: Ensure MDC didn’t create another Log Analytics Workspace, delete it if so.</summary>
 
+1. Go to Log Analytics workspaces and delete the Default workspace that was created.<br>
+![Azure image](https://imgur.com/afkAlBI.png)
+![Azure image](https://imgur.com/fS4CfSq.png)
 </details>
 
 
