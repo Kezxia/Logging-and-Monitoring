@@ -73,22 +73,33 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 2: Enable Defender Plans for VMs and SQL Instances on VMs.</summary>
 
-1. Turn ‘Servers’ & ‘SQL servers on machines’ ON → select ‘save’.
+1. Turn ‘Servers’ & ‘SQL servers on machines’ ON → select ‘save’.<br>
 ![Azure image](https://imgur.com/Vv21I7L.png)
 </details>
 
 <details>
 <summary>Part 3: Enable Data Collection (All Events).</summary>
 
-1. Select ‘Data Collection’ & ‘All Events’ → select ‘save’.
+1. Select ‘Data Collection’ & ‘All Events’ → select ‘save’.<br>
 ![Azure image](https://imgur.com/aZJLqCZ.png)
-2. Go back to Microsoft Defender, refresh & you will see it now has 2 plans.
+2. Go back to Microsoft Defender, refresh & you will see it now has 2 plans.<br>
 ![Azure image](https://imgur.com/zdtQQ53.png)
 </details>
 
 <details>
 <summary>Part 4: Enable Microsoft Defender for Cloud for Subscription.</summary>
 
+1. Search Microsoft Defender and click on ‘Environment settings’ → click down on the toggle & click on the three dots to edit settings for ‘Azure subscription 1’.
+![Azure image](https://imgur.com/c89rJYA.png)
+2. Turn status ON for Servers, Databases, Storage, & Key Vault.<br>
+![Azure image](https://imgur.com/6nr1oQS.png)
+3. Got to settings under Servers.<br>
+![Azure image](https://imgur.com/YALcrZ7.png)
+4. Then click Edit configuration.<br>
+![Azure image](https://imgur.com/2iruTO7.png)
+5. Change workspace to custom → select ‘LAW-Cyber-Lab-0x’, Apply → select continue & save.<br>
+![Azure image](https://imgur.com/t9oOVnM.png)
+![Azure image](https://imgur.com/gxpthlW.png)
 </details>
 
 <details>
