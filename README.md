@@ -128,8 +128,12 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 
 
 <details>
-<summary>Part 1: Create an Azure Storage Account (name needs to be unique).</summary>
+<summary>Part 1: Create an Azure Storage Account (sacyberlab2x, name needs to be unique).</summary>
 
+1. Search for Storage account and create a new one.<br>
+![Azure image](https://imgur.com/ziv3uAd.png)
+2. Put it in our RG-Cyber-Lab group → Name it sacyberlab2x → Keep it in the same region as our vms (East US 2) → Keep everything else the same → Review and Create it.<br>
+![Azure image](https://imgur.com/nyhuo9z.png)
 </details>
 
 <details>
