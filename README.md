@@ -139,7 +139,7 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 2: Enable Flow logs for both both Network Security Groups (NSGs).</summary>
 
-1. Search NSG and click the windows-vm-nsg → select NSG flow Logs → select Create a NSG Flow Log.<br>
+1. Search NSG and click the windows-vm-nsg → select NSG flow logs → select Create a NSG Flow Log.<br>
 ![Azure image](https://imgur.com/CfqPOoj.png)
 2. Click Select target resource and select Network Security Group → select both the windows and linux vm → confirm selection.<br>
 ![Azure image](https://imgur.com/ul17vSq.png)
@@ -153,7 +153,35 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 3: Configure Data Collection Rules within our Log Analytics Workspace.</summary>
 
+1. Configure Linux Data Sources (auth only).<br>
+   a. Search for Log Analytics Workspace → select LAW-Cyber-Lab-0x → select Agents and Data Collection Rules → Create.<br>
+   ![Azure image](https://imgur.com/WtagJYM.png)
+   ![Azure image](https://imgur.com/vBNu72t.png)
+   b. Name the Rule: dcr-all-vms (data collection rule) → make sure the region is East US 2 (the same as the vms) → select all for platform type → select        Next: Resources.<br>
+   ![Azure image](https://imgur.com/fH1Lwyu.png)
+   c. Select Add resources → expand RG-Cyber-Lab resource group → select both vms → select apply → Next: Collect and deliver.<br>
+   ![Azure image](https://imgur.com/OiNzxBB.png)
+   ![Azure image](https://imgur.com/50RLI6C.png)
+   d. Select Add data source → select Linux Syslog as data source type → select LOG_AUTH → leave the minimum log level at LOG_DEBUG → select none for the        rest of the facilities → select Next: Destination → select Add destination → select Destination Type as Azure Monitor Logs and Destination Details as your    Logs Analytics Workspace → Select Add data source.<br>
+   ![Azure image](https://imgur.com/oN0ZfYV.png)
+   ![Azure image](https://imgur.com/fqiQDLM.png)
+3. Configure Windows Data Sources (Application (information only), Security (All)).<br>
+   a. We will add another data source for the windows event logs → select the Information log for Application → select Audit success & Audit failure for         Security → select Next: Destination → select Destination Type as Azure Monitor Logs and Destination Details as your Logs Analytics Workspace → Select Add     data source.<br>
+   ![Azure image](https://imgur.com/tub722G.png)
+   ![Azure image](https://imgur.com/TklDdb1.png)
+   b. Review + create the data collection rules.<br>
+   ![Azure image](https://imgur.com/OEUAO97.png)
+5. Configure Special Windows Event Data Collection (Defender and Windows Firewall).<br>
+   a. Go back to see that the data collection rules were created → select it → go to Data sources → select Windows Event Logs → Change Basic to Custom → copy    this XPath query: Microsoft-Windows-Windows Defender/Operational!*[System[(EventID=1116 or EventID=1117)]] → paste and add it → copy this XPath query:        Microsoft-Windows-Windows Firewall With Advanced Security/Firewall!*[System[(EventID=2003)]] → paste, add it and select Save.
+   ![Azure image](https://imgur.com/YuKhr21.png)
+   ![Azure image](https://imgur.com/Nx3awQU.png)
+   ![Azure image](https://imgur.com/aBCBOYB.png)
+   ![Azure image](https://imgur.com/tyLAKYA.png)
+   b. Check that both XPath queries have been added.<br>
+   ![Azure image](https://imgur.com/stCdnBf.png)
 </details>
+
+
 
 <details>
 <summary>Part 4: Manually install the Log Analytics Agent on both the windows-vm and linux-vm.</summary>
