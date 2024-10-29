@@ -139,6 +139,15 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 2: Enable Flow logs for both both Network Security Groups (NSGs).</summary>
 
+1. Search NSG and click the windows-vm-nsg → select NSG flow Logs → select Create a NSG Flow Log.<br>
+![Azure image](https://imgur.com/CfqPOoj.png)
+2. Click Select target resource and select Network Security Group → select both the windows and linux vm → confirm selection.<br>
+![Azure image](https://imgur.com/ul17vSq.png)
+![Azure image](https://imgur.com/bdw9PLk.png)
+3. Storage account should be sacyberlab2x and retention days 0 → select Next: Analytics.<br>
+![Azure image](https://imgur.com/g6AHkEB.png)
+4. Select Version 2 → enable traffic analytics → set to every 10 minutes → make sure the Log analytics workspace is correct → review+create.<br>
+![Azure image](https://imgur.com/uNlzhni.png)
 </details>
 
 <details>
