@@ -95,7 +95,7 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 ![Azure image](https://imgur.com/6nr1oQS.png)
 3. Got to settings under Servers.<br>
 ![Azure image](https://imgur.com/YALcrZ7.png)
-4. Then click Edit configuration.<br>
+4. Select Edit configuration.<br>
 ![Azure image](https://imgur.com/2iruTO7.png)
 5. Change workspace to custom → select ‘LAW-Cyber-Lab-0x’, Apply → select continue & save.<br>
 ![Azure image](https://imgur.com/t9oOVnM.png)
@@ -105,6 +105,10 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 5: Enable Microsoft Defender for Cloud Continuous Export in Environment Settings.</summary>
 
+1. Go to ‘Continuous export’ → select ‘Log Analytics workspace’ → select all the Exported data types.<br>
+![Azure image](https://imgur.com/1FK2HIB.png)
+3. Select RG-Cyber-Lab for the resource group & ‘LAW-Cyber-Lab-0x’ for the workspace → select save.<br>
+![Azure image](https://imgur.com/IzuL9wD.png)
 </details>
 
 <details>
