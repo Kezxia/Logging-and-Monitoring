@@ -239,6 +239,14 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 1: Setup logging for Microsoft Entra ID and generate some logs.</summary>
 
+1. Create a Diagnostic setting for Audit and Signin Logs.<br>
+    a. Go to Microsoft Entra ID → select Diagnostic setting → select Add diagnostic setting.<br>
+    b. Name it ds-audit-signin → select AuditLogs and SigninLogs → Select Send to Log Analytics Workspace and Select the workspace → select Save.<br>
+    c. Go back to the diagnostic setting to see the one we created.<br>
+2. Create a dummy user to generate audit logs.<br>
+    a. Go to Microsoft Entra ID → select Users → select New User and Create new user → name it dummy_user → copy temp. password → select Review + create →        copy the user principal name → select Create.<br>
+    b. Refresh and you can see that the user has been created.<br>
+3. Login with the dummy_user credentials to generate signin logs.<br>
 </details>
 
 <details>
