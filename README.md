@@ -191,7 +191,7 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
    ![Azure image](https://imgur.com/Pa4XBpG.png)
    b. RDT into the window vm → open the notepad and paste the Workspace ID and Primary key.<br>
    ![Azure image](https://imgur.com/rdUTgk3.png)
-   ![Azure image](https://imgur.com/h2eP8w2.png)
+   ![Azure image](https://imgur.com/h2eP8w2.png)<br>
    c. Go back to Log Analytics Agent → copy the download Windows Agent (64 bit) link → open Edge in the windows vm → paste the download link in the search          bar and press enter to download.<br>
    ![Azure image](https://imgur.com/AO5vsLR.png)
    d. Open file → select next and you can see the agent was already installed, so we will add the Log Analytics Workspace through the already downloaded            agent.<br>
@@ -205,6 +205,12 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
    f. You should now see both windows servers are connected.<br>
    ![Azure image](https://imgur.com/xH4UqJ6.png)
 3. Install the Log Analytics Agent on the linux-vm.<br>
+    a. Go back to Log Analytics Agent → select Linux servers → expand Log Analytics Agent instructions → Copy the agent for Linux.<br>
+    ![Azure image](https://imgur.com/HfcEJYj.png)
+    b. Open the terminal and SSH into the linux vm: ssh labuser@172.206.42.40 → enter password: Cyberlab1234! → install the agent by pasting it and click         enter → you should get a status code 0 at the end.<br>
+    ![Azure image](https://imgur.com/D1pnqNG.png)
+    ![Azure image](https://imgur.com/ifFhtrE.png)<br>
+    c. Go back to Log Analytics Agent to check and see both linux servers are connected.<br>
 </details>
 
 
