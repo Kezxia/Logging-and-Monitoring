@@ -239,38 +239,37 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 1: Setup logging for Microsoft Entra ID and generate some logs.</summary>
 
-1. Create a Diagnostic setting for Audit and Signin Logs.<br>
-    a. Go to Microsoft Entra ID → select Diagnostic setting → select Add diagnostic setting.<br>
-    b. Name it ds-audit-signin → select AuditLogs and SigninLogs → Select Send to Log Analytics Workspace and Select the workspace → select Save.<br>
-    c. Go back to the diagnostic setting to see the one we created.<br>
-2. Create a dummy user to generate audit logs.<br>
-    a. Go to Microsoft Entra ID → select Users → select New User and Create new user → name it dummy_user → copy temp. password → select Review + create →        copy the user principal name → select Create.<br>
-    b. Refresh and you can see that the user has been created.<br>
-3. Login with the dummy_user credentials to generate signin logs.<br>
+1. Create Diagnostic Settings to ingest Azure AD Logs.<br>
+2. Go to Microsoft Entra ID → select Diagnostic setting → select Add diagnostic setting.<br>
+3. Name it ds-audit-signin → select AuditLogs and SigninLogs → Select Send to Log Analytics Workspace and Select the workspace → select Save.<br>
+4. Go back to the diagnostic setting to see the one we created.<br>
+5. Check Log Analytics Workspace to see that the tables have been created: “AuditLogs” “SigninLogs”.<br>
+</details>
+
+
+<details>
+<summary>Part 2: Create a dummy user, username “dummy_user” to generate audit logs.</summary>
+
+1. Go to Microsoft Entra ID → select Users → select New User and Create new user → name it dummy_user → copy temp. password → select Review + create →        copy the user principal name → select Create.<br>
+2. Refresh and you can see that the user has been created.<br>
+3. Login once with the dummy_user credentials to generate signin logs (incognito window).<br>
+4. Assign dummy_user the Role of Global Administrator.<br>
+5. Delete dummy_user.<br>
 </details>
 
 <details>
-<summary>Part 2: Create Diagnostic Settings to ingest Microsoft Entra ID Logs.</summary>
-
-</details>
-
-<details>
-<summary>Part 3: Create a dummy user, username “dummy_user”.</summary>
-
-</details>
-
-<details>
-<summary>Part 4: Observe Audit Logs logs in Log Analytics Workspace.</summary>
-
-</details>
-
-<details>
-<summary>Part 5: Simulate Brute Force Attack against Microsoft Entra ID.</summary>
+<summary>Part 3: Observe Audit Logs logs in Log Analytics Workspace.</summary>
 
 </details>
 
 <details>
-<summary>Part 6: Observe SigninLogs in Log Analytics Workspace.</summary>
+<summary>Part 4: Simulate Brute Force Attack against Microsoft Entra ID.</summary>
+
+1. Produce 10-11 failed Logins with the portal
+</details>
+
+<details>
+<summary>Part 5: Observe SigninLogs in Log Analytics Workspace.</summary>
 
 </details>
 
