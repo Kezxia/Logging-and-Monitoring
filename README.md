@@ -186,8 +186,25 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 4: Manually install the Log Analytics Agent on both the windows-vm and linux-vm.</summary>
 
-1. Install the Log Analytics Agent on the windows-vm.<br>
-2. Install the Log Analytics Agent on the linux-vm.<br>
+1. Install the Windows Agent on the windows-vm.<br>
+   a. Go to our Log Analytics Workspace and select it → select Agents → expand Log Analytics Agent instructions → Copy the Workspace ID and the Primary key.<br>
+   ![Azure image](https://imgur.com/Pa4XBpG.png)
+   b. RDT into the window vm → open the notepad and paste the Workspace ID and Primary key.<br>
+   ![Azure image](https://imgur.com/rdUTgk3.png)
+   ![Azure image](https://imgur.com/h2eP8w2.png)
+   c. Go back to Log Analytics Agent → copy the download Windows Agent (64 bit) link → open Edge in the windows vm → paste the download link in the search          bar and press enter to download.<br>
+   ![Azure image](https://imgur.com/AO5vsLR.png)
+   d. Open file → select next and you can see the agent was already installed, so we will add the Log Analytics Workspace through the already downloaded            agent.<br>
+   ![Azure image](https://imgur.com/2fCrLF2.png)
+   ![Azure image](https://imgur.com/OO3BNlX.png)
+   e. Search for control panel → switch to large icons → select Microsoft Monitoring Agent → Go to Azure Log Analytics (OMS) tab → click Add → paste the         Workspace ID and the Primary key → Make sure it’s Azure Commercial → select Ok → select Apply → Status should show a green check to signify that the          connection is successful.<br>
+   ![Azure image](https://imgur.com/grc8GHB.png)
+   ![Azure image](https://imgur.com/Qx38xeK.png)
+   ![Azure image](https://imgur.com/dCayHGV.png)
+   ![Azure image](https://imgur.com/7EHAOlK.png)
+   f. You should now see both windows servers are connected.<br>
+   ![Azure image](https://imgur.com/xH4UqJ6.png)
+3. Install the Log Analytics Agent on the linux-vm.<br>
 </details>
 
 
