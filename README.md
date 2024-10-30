@@ -218,11 +218,14 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <summary>Part 5: Begin querying logs in Log Analytics from the VMs and NSGs.</summary>
 
 1. Query Syslog (linux).<br>
-   a. Go to Logs in your Logs Analytics Workspace → start querying the logs → type Syslog for Linux & click Run.
-2. Query SecurityEvent (windows).<br>
-   a. Type SecurityEvent for Windows & click Run.
-3. Query AzureNetworkAnalytics_CL (Network Security Groups/NSGs).<br>
-   a. Type AzureNetworkAnalytics_CL for the NSG logs & click Run.
+   a. Go to Logs in your Logs Analytics Workspace → start querying the logs → type Syslog for Linux & click Run.<br>
+   ![Azure image](https://imgur.com/SA32o44.png)
+3. Query SecurityEvent (windows).<br>
+   a. Type SecurityEvent for Windows & click Run.<br>
+   ![Azure image](https://imgur.com/XPBGpgw.png)
+5. Query AzureNetworkAnalytics_CL (Network Security Groups/NSGs).<br>
+   a. Type AzureNetworkAnalytics_CL for the NSG logs & click Run.<br>
+   ![Azure image](https://imgur.com/DOm0oiT.png)
 </details>
 
 
