@@ -186,9 +186,21 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 4: Manually install the Log Analytics Agent on both the windows-vm and linux-vm.</summary>
 
+1. Install the Log Analytics Agent on the windows-vm.<br>
+2. Install the Log Analytics Agent on the linux-vm.<br>
 </details>
 
 
+<details>
+<summary>Part 5: Begin querying logs in Log Analytics from the VMs and NSGs.</summary>
+
+1. Query Syslog (linux).<br>
+   a. Go to Logs in your Logs Analytics Workspace → start querying the logs → type Syslog for Linux & click Run.
+2. Query SecurityEvent (windows).<br>
+   a. Type SecurityEvent for Windows & click Run.
+3. Query AzureNetworkAnalytics_CL (Network Security Groups/NSGs).<br>
+   a. Type AzureNetworkAnalytics_CL for the NSG logs & click Run.
+</details>
 
 
 ![Architecture Diagram](https://imgur.com/Qa1MyLI.png)
