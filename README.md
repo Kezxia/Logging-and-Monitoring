@@ -240,10 +240,16 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <summary>Part 1: Setup logging for Microsoft Entra ID and generate some logs.</summary>
 
 1. Create Diagnostic Settings to ingest Azure AD Logs.<br>
-2. Go to Microsoft Entra ID → select Diagnostic setting → select Add diagnostic setting.<br>
-3. Name it ds-audit-signin → select AuditLogs and SigninLogs → Select Send to Log Analytics Workspace and Select the workspace → select Save.<br>
-4. Go back to the diagnostic setting to see the one we created.<br>
-5. Check Log Analytics Workspace to see that the tables have been created: “AuditLogs” “SigninLogs”.<br>
+    a. Go to Microsoft Entra ID → select Diagnostic setting → select Add diagnostic setting.<br>
+    ![Azure image](https://imgur.com/nd6L8bz.png)
+2. Name it ds-audit-signin → select AuditLogs and SigninLogs → Select Send to Log Analytics Workspace and Select the workspace → select Save.<br>
+![Azure image](https://imgur.com/XhmXPJC.png)
+3. Go back to the diagnostic setting to see the one we created.<br>
+![Azure image](https://imgur.com/UyOB5q2.png)
+4. Check Log Analytics Workspace to see that the tables have been created: “AuditLogs” “SigninLogs”.<br>
+    a. Go to Log Analytics Workspace → select Tables → type audit & signin to see if they were created → we can still attempt to query it even if they don’t show up.<br>
+    ![Azure image](https://imgur.com/7uhhbTk.png)
+    ![Azure image](https://imgur.com/b7SfcI1.png)
 </details>
 
 
@@ -254,7 +260,9 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 2. Refresh and you can see that the user has been created.<br>
 3. Login once with the dummy_user credentials to generate signin logs (incognito window).<br>
 4. Assign dummy_user the Role of Global Administrator.<br>
+    a. Select the dummy_user → select Assigned roles → select Add assignments → type global in search bar → select Global Administrator → select Add → refresh to see assigned role.<br>
 5. Delete dummy_user.<br>
+    a. Delete the dummy_user to generate another audit log → select Overview and delete the user.<br>
 </details>
 
 <details>
@@ -263,9 +271,11 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 </details>
 
 <details>
+    
 <summary>Part 4: Simulate Brute Force Attack against Microsoft Entra ID.</summary>
 
-1. Produce 10-11 failed Logins with the portal
+1. Create the “attacker” user if not exists already.
+2. Produce 10-11 failed Logins with the portal.
 </details>
 
 <details>
