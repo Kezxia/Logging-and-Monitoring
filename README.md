@@ -257,12 +257,23 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <summary>Part 2: Create a dummy user, username “dummy_user” to generate audit logs.</summary>
 
 1. Go to Microsoft Entra ID → select Users → select New User and Create new user → name it dummy_user → copy temp. password → select Review + create →        copy the user principal name → select Create.<br>
+![Azure image](https://imgur.com/S2Wg3sH.png)
+![Azure image](https://imgur.com/OXmCwOR.png)
+![Azure image](https://imgur.com/TtFrEOI.png)
 2. Refresh and you can see that the user has been created.<br>
+![Azure image](https://imgur.com/NhS9n8w.png)
 3. Login once with the dummy_user credentials to generate signin logs (incognito window).<br>
-4. Assign dummy_user the Role of Global Administrator.<br>
-    a. Select the dummy_user → select Assigned roles → select Add assignments → type global in search bar → select Global Administrator → select Add → refresh to see assigned role.<br>
-5. Delete dummy_user.<br>
+    a. Open a private tab and login using the dummy_user credentials and update password to Cyberlab123!.<br>
+    ![Azure image](https://imgur.com/VTP9kwf.png)
+    ![Azure image](https://imgur.com/POjWdqE.png)
+5. Assign dummy_user the Role of Global Administrator.<br>
+    a. Select the dummy_user → select Assigned roles → select Add assignments → type global in search bar → select Global Administrator → select Add.<br>
+   ![Azure image](https://imgur.com/UoNs2cM.png)
+   b. Refresh to see assigned role.<br>
+   ![Azure image](https://imgur.com/kF5kyIm.png)
+7. Delete dummy_user.<br>
     a. Delete the dummy_user to generate another audit log → select Overview and delete the user.<br>
+    ![Azure image](https://imgur.com/R9l5JfL.png)
 </details>
 
 <details>
