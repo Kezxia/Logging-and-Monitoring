@@ -279,6 +279,9 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 3: Observe Audit Logs logs in Log Analytics Workspace.</summary>
 
+1. Go to Log Analytics Workspace → select Logs → change time to local time → query AuditLogs.<br>
+![Azure image](https://imgur.com/vXUslDr.png)
+![Azure image](https://imgur.com/7i1DRsb.png)
 </details>
 
 <details>
