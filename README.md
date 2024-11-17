@@ -390,18 +390,31 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
     ![Azure image](https://imgur.com/FwW1O0u.png)
     b. Name it ds-storage-account → select audit → select Send to Log Analytics Workspace → select LAW-Cyber-Lab-0x → select Save.<br>
     ![Azure image](https://imgur.com/vJGlbOs.png)
-3. Go back to diagnostic setting to see what we created.<br>
+2. Go back to diagnostic setting to see what we created.<br>
 ![Azure image](https://imgur.com/Zkv1ste.png)
 </details>
 
 <details>
 <summary>Part 2: Create a Key Vault Instance.</summary>
 
+1. Go to Key vault → select Create key vault → select the RG-Cyber-Lab resource group → name it akv-cyber-lab-9001 → select region East US 2 → select Next.<br>
+![Azure image](https://imgur.com/TX58ksX.png)
+![Azure image](https://imgur.com/pEIv6vw.png)
+2. Select Vault access policy → select Review + create → select Create.<br>
+![Azure image](https://imgur.com/QJF6wdq.png)
+![Azure image](https://imgur.com/7fJgsfX.png)
+3. Go back to Key vault → select akv-cyber-lab-9001 → select Access policies → select yourself as the user → select Edit and check to make sure you have permissions for everything and close it.<br>
+![Azure image](https://imgur.com/bexk8hB.png)
 </details>
 
 <details>
 <summary>Part 3: Configure logging for your Key Vault instance by enabling diagnostic settings.</summary>
 
+1. Select Diagnostic settings → select Add diagnostic setting → name it ds-akv → select audit → select Send to Log Analytics Workspace → select LAW-Cyber-Lab-0x → select Save.<br>
+![Azure image](https://imgur.com/E53lkIE.png)
+![Azure image](https://imgur.com/nK9HSvd.png)
+2. Go back to diagnostic setting to see what we created.<br>
+![Azure image](https://imgur.com/2DpwB8t.png)
 </details>
 
 <details>
