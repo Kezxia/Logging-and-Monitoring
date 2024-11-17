@@ -309,6 +309,8 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <summary>Part 5: Observe SigninLogs in Log Analytics Workspace.</summary>
 
 1. Go to Log Analytics Workspace → select Logs → change time to local time → query SigninLogs.
+![Azure image](https://imgur.com/5Dzu9lG.png)
+![Azure image](https://imgur.com/ZEdsEO2.png)
 </details>
 
 
