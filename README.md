@@ -325,6 +325,12 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 1: Export Azure Activity Logs to Log Analytics Workspace.</summary>
 
+1. Go to Monitor → select Activity log → select Export Activity Logs → select Add diagnostic setting → name it ds-azure-activity → select all the Logs → select Send to Log Analytics Workspace → select LAW-Cyber-Lab-0x → select Save.
+![Azure image](https://imgur.com/JXgJhru.png)
+![Azure image](https://imgur.com/QNTtPKS.png)
+![Azure image](https://imgur.com/rY7wtHJ.png)
+3. Go back to diagnostic setting to see what we created.
+![Azure image](https://imgur.com/p1TBbkt.png)
 </details>
 
 <details>
