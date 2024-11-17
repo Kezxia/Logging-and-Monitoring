@@ -325,33 +325,51 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 1: Export Azure Activity Logs to Log Analytics Workspace.</summary>
 
-1. Go to Monitor → select Activity log → select Export Activity Logs → select Add diagnostic setting → name it ds-azure-activity → select all the Logs → select Send to Log Analytics Workspace → select LAW-Cyber-Lab-0x → select Save.
+1. Go to Monitor → select Activity log → select Export Activity Logs → select Add diagnostic setting → name it ds-azure-activity → select all the Logs → select Send to Log Analytics Workspace → select LAW-Cyber-Lab-0x → select Save.<br>
 ![Azure image](https://imgur.com/JXgJhru.png)
 ![Azure image](https://imgur.com/QNTtPKS.png)
 ![Azure image](https://imgur.com/rY7wtHJ.png)
-3. Go back to diagnostic setting to see what we created.
+3. Go back to diagnostic setting to see what we created.<br>
 ![Azure image](https://imgur.com/p1TBbkt.png)
 </details>
 
 <details>
 <summary>Part 2: Create a new Resource Group named “Scratch-Resource-Group”.</summary>
 
+1. Go to Resource groups → select Create → name it Scratch-Resource-Group → put it in the same region as the other groups, US East US 2 → select Review + create → select Create.<br>
+![Azure image](https://imgur.com/InQ3Eso.png)
+![Azure image](https://imgur.com/Cp3P3jn.png)
+![Azure image](https://imgur.com/qCvnA8T.png)
 </details>
 
 <details>
 <summary>Part 3: Create another new Resource Group named “Critical-Infrastructure-Wastewater”.</summary>
-(DO NOT ACCIDENTALLY DELETE YOUR LAB RESOURCE GROUP)
 
+1. Go to Resource groups → select Create → name it Critical-Infrastructure-Wastewater → put it in the same region as the other groups, US East US 2 → select Review + create → select Create.<br>
+![Azure image](https://imgur.com/InQ3Eso.png)
+![Azure image](https://imgur.com/h1oICre.png)
+![Azure image](https://imgur.com/kNBAGIv.png)
 </details>
 
 <details>
 <summary>Part 4: Delete both “Scratch-Resource-Group” and “Critical-Infrastructure”.</summary>
+(DO NOT ACCIDENTALLY DELETE YOUR LAB RESOURCE GROUP)
 
+1. Go to Resource groups → select Scratch-Resource-Group → select Delete resource group → copy resource group name → paste it to confirm deletion → select Delete.<br>
+![Azure image](https://imgur.com/pRw7cye.png)
+2. Go to Resource groups → select Critical-Infrastructure → select Delete resource group → copy resource group name → paste it to confirm deletion → select Delete.<br>
+![Azure image](https://imgur.com/7vXTafA.png)
 </details>
 
 <details>
 <summary>Part 5: Generate some logs.</summary>
 
+1. Go to Log Analytics Workspace → select Logs → query AzureActivity to see if some logs are coming in.<br>
+![Azure image](https://imgur.com/SoBpzKK.png)
+2. Query for the deletion of the Critical Resource Groups.<br>
+![Azure image](https://imgur.com/c2Mg0Tk.png)
+3. Query for deletion activities within a certain timespan.<br>
+![Azure image](https://imgur.com/CnP2AJA.png)
 </details>
 
 
