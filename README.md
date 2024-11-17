@@ -288,13 +288,27 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
     
 <summary>Part 4: Simulate Brute Force Attack against Microsoft Entra ID.</summary>
 
-1. Create the “attacker” user if not exists already.
-2. Produce 10-11 failed Logins with the portal.
+1. Create the “attacker” user if does not exist already.<br>
+    a. Go to Microsoft Entra ID → select Users → select New User and Create new user → name it attacker → copy temp. password → select Review + create → copy 
+    the user principal name → select Create.<br>
+    ![Azure image](https://imgur.com/mQPcPSb.png)
+    ![Azure image](https://imgur.com/jXa2Xyf.png)
+    ![Azure image](https://imgur.com/jXa2Xyf.png)
+    ![Azure image](https://imgur.com/XOV7y7k.png)<br>
+    b. refresh and you can see that the user has been created.<br>
+    ![Azure image](https://imgur.com/eW6BUfs.png)
+3. Produce 10-11 failed Logins with the portal.<br>
+    a. Open a private tab, and login using the attacker user credentials and update password to Cyberlab123! → we will login correctly once, and then do a        failed login.<br>
+    ![Azure image](https://imgur.com/Bv2HLXk.png)
+    ![Azure image](https://imgur.com/QUcCFO7.png)<br>
+    b. Once logged in, close and reopen the private browser and attempt to sign in with a wrong password 10 times → then login with the correct password →        close the private browser.<br>
+    ![Azure image](https://imgur.com/4rOpKtA.png)
 </details>
 
 <details>
 <summary>Part 5: Observe SigninLogs in Log Analytics Workspace.</summary>
 
+1. Go to Log Analytics Workspace → select Logs → change time to local time → query SigninLogs.
 </details>
 
 
