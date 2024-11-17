@@ -384,6 +384,14 @@ Search Microsoft Defender and click on ‘Environment settings → select the to
 <details>
 <summary>Part 1: Configure Logging for Azure Storage.</summary>
 
+1. Configure logging for your storage account by enabling diagnostic settings for blob storage.<br>
+    a. Go to Storage account and select sacyberlab2x → select Diagnostic settings → select disabled for the blob storage account → select Add diagnostic          setting.<br>
+    ![Azure image](https://imgur.com/DMyogKO.png)
+    ![Azure image](https://imgur.com/FwW1O0u.png)
+    b. Name it ds-storage-account → select audit → select Send to Log Analytics Workspace → select LAW-Cyber-Lab-0x → select Save.<br>
+    ![Azure image](https://imgur.com/vJGlbOs.png)
+3. Go back to diagnostic setting to see what we created.<br>
+![Azure image](https://imgur.com/Zkv1ste.png)
 </details>
 
 <details>
